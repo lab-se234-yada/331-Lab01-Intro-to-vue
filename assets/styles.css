@@ -5,6 +5,11 @@ body {
   color: #282828;
 }
 
+.outstock {
+  filter: grayscale(100%);
+  cursor: not-allowed;
+}
+
 .button {
   margin: 30px;
   background-color: #39495c;

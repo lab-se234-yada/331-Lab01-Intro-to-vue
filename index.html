@@ -12,10 +12,67 @@
 
 <body>
     <div id="app">
-        <h1>Product goes here</h1>
+        <!-- 3.1 -->
+        <div id="app">
+            <div class="nav-bar"></div>
+             <!-- 10.5 -->
+            <div class="cart">Cart({{cart.length}})</div>
+            <!-- <div class="product-display">
+                <div class="product-container">
+                    <div class="product-image" > -->
+                        <!-- 3.5 images goes here -->
+                        <!-- 7.6 -->
+                        <!-- <img :src ="image" :class="{outstock: !inStock}">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>{{title}}</h1> -->
+        <!-- 3.6 -->
+            <!-- <a :href="link">{{title}}</a> -->
+        <!-- 2.5 -->
+        <!-- <p>{{description}}</p>
+        <p v-if="inventory > 10">In Stock</p>
+        <p v-else="inventory <= 10 && inventory > 0">Almost out of the Stock</p>
+        <p v-else>Out of Stock</p> -->
+        <!-- 6.7 -->
+        <!-- <p v-if="inStock">In Stock Status</p>
+        <p v-else >Out of Stock Status</p>
+        <button class="button" @click="changeStatus">Status</button>
+            <ul>
+                <li v-for="detail in details">{{detail}}</li>
+            </ul>
+            <div v-for="(variant,index) in variants" :key="variant.id"
+            @mouseover="updateVariant(index)"
+            class="color-circle" :style="{backgroundColor: variant.color}">
+                {{variant.color}}
+            </div> -->
+            <!-- 5.5 -->
+            <!-- <div><span v-for="size in sizes">{{size}}</span></div> -->
+        <!-- 8.5 -->
+        <!-- <p>{{onSale}}</p> -->
+        <!-- 4.9 -->
+        <!-- <p v-if="onSale">On sale</p>
+        <p v-else>not on sale</p>
+        <button class="button" :disabled='!inStock' @click="addToCart" 
+        :class="{disabledButton: !inStock}">Add to Cart</button>
     </div>
+    </div> -->
+    <!-- 10.6 -->
+    <product-display :premium="premium" @add-to-cart="updateCart" @remove-the-cart="removeUpdate"></product-display>  
+    <product-details :details="details"></product-details>
+    <product-display></product-display>
+    <product-details :details="details" ></product-details>
+    <product-display></product-display>
+    <product-details :details="details" ></product-details>
+</div>
+</div>
 
     <!-- Import Js -->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+    <script src="./components/ProductDetails.js"></script>
+
     <script src="./main.js"></script>
 </body>
 
